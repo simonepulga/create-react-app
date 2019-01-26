@@ -11,15 +11,16 @@
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
 process.on('unhandledRejection', err => {
+  console.log('you can see me', path);
   throw err;
 });
 
 const fs = require('fs-extra');
 const path = require('path');
-const chalk = require('../../react-dev-utils/chalk');
+const chalk = require('chalk');
 const execSync = require('child_process').execSync;
-const spawn = require('../../react-dev-utils/crossSpawn');
-const { defaultBrowsers } = require('../../react-dev-utils/browsersHelper');
+const spawn = require('react-dev-utils/crossSpawn');
+const { defaultBrowsers } = require('react-dev-utils/browsersHelper');
 const os = require('os');
 const verifyTypeScriptSetup = require('./utils/verifyTypeScriptSetup');
 

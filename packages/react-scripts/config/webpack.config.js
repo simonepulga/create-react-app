@@ -344,7 +344,10 @@ module.exports = function(webpackEnv) {
             {
               test: /\.elm$/,
               exclude: [/elm-stuff/, /node_modules/],
-              loader: require.resolve("elm-webpack-loader")
+              loader: require.resolve("elm-webpack-loader"),
+              options: {
+                optimize: true
+              }
             },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
