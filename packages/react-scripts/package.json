@@ -1,6 +1,6 @@
 {
   "name": "ec-react-scripts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom configuration and scripts for Create React App. Not indended for general use.",
   "repository": "simonepulga/create-react-app",
   "license": "MIT",
