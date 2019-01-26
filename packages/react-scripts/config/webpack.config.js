@@ -340,6 +340,12 @@ module.exports = function(webpackEnv) {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },
+            // Process Elm files
+            {
+              test: /\.elm$/,
+              exclude: [/elm-stuff/, /node_modules/],
+              loader: require.resolve("elm-webpack-loader")
+            },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
